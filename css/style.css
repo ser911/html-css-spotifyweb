@@ -149,7 +149,7 @@ aside hr{
 main{
   margin: 100px 0;
   height: 100vh;
-  overflow: auto;
+  overflow-y: scroll;
 
 }
 .main-content {
