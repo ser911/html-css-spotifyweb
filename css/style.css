@@ -5,12 +5,16 @@
   box-sizing: border-box;
 }
 /* /RESET RULES */
+/* BODY RULES */
+
 body{
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   background-color: #050A30;
 
 }
+/* /BODY RULES */
+/* HEADER */
 header{
   width: 100%;
   height: 100px;
@@ -23,20 +27,6 @@ header{
 
 }
 
-aside img {
-  height: 50px;
-  margin: 20px 20px 30px;
-
-}
-
-aside ul li {
-  list-style-type: none;
-  color: #fff;
-}
-aside ul li i {
-  height: 40px;
-  color: #fff;
-}
 header a {
   color: #fff;
   border: 2px solid #fff;
@@ -51,6 +41,103 @@ header a {
 
 
 }
+/* /HEADER */
+
+/* ASIDE */
+
+aside{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 100px);
+  background-color: rgba(0,0,0, 0.6);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+aside #logo-img {
+  width: 150px;
+  margin: 20px 20px 30px;
+
+}
+
+aside ul li {
+  list-style-type: none;
+  color: #666666;
+}
+aside ul li i {
+  height: 40px;
+  color: #fff;
+    color: #666666;
+}
+aside .side-nav-1, aside .side-nav-2{
+  margin-left: 30px;
+}
+
+.nav-head h4{
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.side-nav-2 .nav-head{
+  margin-bottom: 20px;
+}
+
+#nav-head-button{
+display: inline-block;
+color: #fff;
+}
+
+
+ aside .side-nav-2 ul li{
+   padding-bottom: 20px;
+ }
+.special-list{
+
+}
+ #plus-sign{
+   font-size: 36px;
+   color: #fff;
+ }
+ #add-playlist{
+   color: #666666;
+   margin: 20px 0;
+ }
+
+ aside .aside-bottom{
+  color: #666666;
+  margin-top: auto;
+  margin-left: 30px;
+
+ }
+  aside .aside-bottom span{
+ padding-bottom: 25px;
+
+  }
+aside hr{
+  margin: 10px 30px 10px 0;
+}
+
+  .aside-bottom-2 {
+    display: flex;
+    padding-bottom: 10px;
+  }
+  .aside-bottom-2 img {
+    height: 30px;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    background-color: #666666;
+    align-self: center;
+  }
+.aside-bottom-2 h5{
+  align-self: center;
+  margin-left: 5px;
+}
+ /* /ASIDE */
 
 
 main{
@@ -59,27 +146,10 @@ main{
   overflow: auto;
 
 }
-
-aside{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 240px;
-  height: 100vh;
-  background-color: rgba(0,0,0, 0.6);
-  z-index: 20;
-
-}
-aside .side-nav-1{
-  margin-left: 30px;
-}
-
 .main-content {
-
-
   margin-left: 240px;
-
 }
+
 .main-content nav {
 
 }
