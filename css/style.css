@@ -98,9 +98,10 @@ color: #fff;
  aside .side-nav-2 ul li{
    padding-bottom: 20px;
  }
-.special-list{
-
-}
+ .side-nav-2-list{
+   height: 250px;
+   overflow-y: scroll;
+ }
  #plus-sign{
    font-size: 36px;
    color: #fff;
@@ -147,8 +148,8 @@ aside hr{
 
 
 main{
-  margin: 100px 0;
-  height: 100vh;
+  padding-top: 100px;
+  height: calc(100vh - 100px);
   overflow-y: scroll;
 
 }
@@ -208,27 +209,61 @@ padding-bottom: 30px;
   }
 
 
-  .main-content-2{
+  .main-content-2, .main-content-3{
     display: flex;
     width: 33%;
-    margin-bottom: 100px;
     flex-wrap: wrap;
+    padding-left: 10px;
 
   }
+  .main-content-2 h2{
+    color: #fff;
+    padding-left: 10px;
+  }
+.main-content-2 p {
+  color: #666666;
+  padding: 10px 0 10px 10px;;
 
-.album-2{
+}
+.album-2, .album-3{
   flex-basis: calc(50% - 10px);
   margin-bottom: 10px;
   margin-left: 10px;
 
+
 }
 
-.album-2 img {
+.main-content-3 p{
+  padding: 10px 0;
+  color: #666666;
+  padding-left: 10px;
+
+}
+
+.main-content-3 h2{
+  color: #fff;
+  padding-left: 10px;
+}
+.album-2 img{
+  margin-top: 20px;
+}
+.album-2 img, .album-3 img {
   width: 100%;
 }
-.album-3{
-  background-color: #cdc9c3;
+.main-content-3{
+  margin-top: 15px;
+
 }
+
+.circle{
+  border-radius: 100%;
+  overflow: hidden;
+}
+.album-3{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 footer{
   height: 100px;
   width: 100%;
@@ -238,7 +273,99 @@ footer{
   left: 0;
   background-color: #282828;
   z-index: 30;
-
-
+  display: flex;
+  justify-content: space-between;
+}
+.song{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 12%;
+  height: 100%;
+}
+.song img {
+  height: 50px;
+  margin-left: 8px;
+  align-self: center;
+}
+.song .song-details {
+align-self: center;
+}
+.song .song-details small {
+  display: block;
+  color: #666666;
+  font-weight: 600;
+}
+.song .favourites{
+  align-self: center;
+}
+.favourites i {
+  color: #666666;
+}
+.player {
+  display: flex;
+  flex-basis: 76%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+.player-control{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+.player img {
+  width: 30px;
+  align-self: center;
 
 }
+.player .p-left{
+  margin-left: 15px;
+
+}
+.player-buttons{
+margin-left: 35px;
+margin-right: 20px;
+}
+
+.player small {
+  align-self: center;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.player .bar{
+  align-self: center;
+  margin: 0 20px 15px;
+}
+
+
+.bar{
+  height: 3px;
+  width: 40%;
+  background-color: #666666;
+  position: relative;
+}
+
+.light-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #e8e8e8;
+  height: 3px;
+  width: 20%;
+
+}
+.settings{
+  display: flex;
+  flex-basis: 12%;
+  justify-content: center;
+  align-items: center;
+}
+.settings i {
+  color: #666666;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+.settings
