@@ -72,7 +72,7 @@ aside ul li {
 aside ul li i {
   height: 40px;
   color: #fff;
-    color: #666666;
+  color: #666666;
 }
 aside .side-nav-1, aside .side-nav-2{
   margin-left: 30px;
@@ -157,9 +157,6 @@ main{
   margin-left: 240px;
 }
 
-.main-content nav {
-
-}
 .main-nav{
   display: flex;
   justify-content: center;
@@ -172,7 +169,20 @@ main{
   padding-right: 10px;
   font-weight: 600;
   font-size: 14px;
+  cursor: pointer;
 }
+.highlight{
+  background-color: #01c5c4;
+  height: 2px;
+  display: none;
+  width: 30px;
+  margin: 0 auto;
+}
+
+.main-nav ul li:hover .highlight {
+  display: block;
+}
+
 .main-content-1{
   display: flex;
   justify-content: space-around;
@@ -201,14 +211,37 @@ padding-bottom: 30px;
 .album-1{
   margin-left: 10px;
   margin-bottom: 10px;
-  width: calc(100% / 6  - 10px)
+  width: calc(100% / 6  - 10px);
+  position: relative;
   }
   .album-1 img{
     width: 100%;
+  }
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+  .album-1:hover .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
 
+  .overlay{
 
+  }
+.overlay i {
+  font-size: 40px;
+  color: #fff;
+}
   .main-content-2, .main-content-3{
     display: flex;
     width: 33%;
@@ -368,4 +401,13 @@ margin-right: 20px;
   margin-right: 10px;
 
 }
-.settings
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .album-1{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: calc(100% / 4  - 10px);
+    }
+}
+/* /MEDIA QUERIES */
