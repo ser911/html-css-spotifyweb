@@ -18,24 +18,25 @@
   <aside>
 
   <img src="img/spotify-branco-1-1.png" id="logo-img">
+  <img src="img/logo-small.svg" id="small-logo">
   <div class="side-nav-1">
     <ul>
-      <li><i class="fas fa-home"></i> Home</li>
-      <li><i class="fas fa-search"></i> Cerca</li>
-      <li><i class="fas fa-book-open"></i> La tua libreria</li>
+      <li><i class="fas fa-home"></i> <span class="hide-xs">Home</span></li>
+      <li><i class="fas fa-search"></i> <span class="hide-xs">Cerca</span></li>
+      <li><i class="fas fa-book-open"></i> <span class="hide-xs">La tua libreria</span></li>
     </ul>
   </div>
 
-  <div class="side-nav-2">
+  <div class="side-nav-2 hide-xs">
     <div class="nav-head">
       <h4>PLAYLIST</h4>
       <div id="nav-head-button">
-      <i class="fas fa-plus-square" id="plus-sign"></i>
+        <i class="fas fa-plus-square" id="plus-sign"></i>
+        <h4>Crea playlist</h4>
 
         </div>
-        <h4 style="display:inline-block;vertical-align:super">Crea playlist</h4>
     </div>
-    <div class="side-nav-2-list">
+    <div class="side-nav-2-list hide-xs">
       <ul>
         <li>Nome playlist</li>
         <li>Nome playlist</li>
@@ -52,15 +53,17 @@
 <div class="aside-bottom">
   <div class="aside-bottom-1">
     <span id="install">
-     <i class="fas fa-arrow-circle-down"></i> Installa app
+     <i class="fas fa-arrow-circle-down"></i> <span class="hide-xs">
+       Installa app
+       </span>
     </span>
   </div>
 
-<hr>
+<hr class="hide-xs">
 
   <div class="aside-bottom-2">
     <img src="img/profile.svg">
-    <h5 id="john">John Doe</h5>
+    <h5 class="hide-xs" id="john">John Doe</h5>
   </div>
 
 </div>
@@ -74,9 +77,9 @@
     <div class="main-nav">
       <nav>
         <ul>
-          <li>IN EVIDENZA</li>
-          <li>PODCAST</li>
-          <li>CLASSIFICHE</li>
+          <li class="xs-spacing">IN EVIDENZA</li>
+          <li class="xs-spacing">PODCAST</li>
+          <li class="xs-spacing">CLASSIFICHE</li>
           <li>GENERI E MOOD</li>
           <li>NUOVE USCITE</li>
           <li>SCOPRI</li>
@@ -96,10 +99,12 @@
         <img src="img/metal_lifting.jpg" alt="">
         <div class="overlay">
           <i class="fas fa-plus"></i>
-
       </div>
-      <h4>Heavy Metal</h4>
-      <h5>Subtitle</h5>
+      </div>
+      <div class="details">
+        <h4>Heavy Metal</h4>
+        <h5>Kyle Dixon &and; Michael Stein</h5>
+
       </div>
       </div>
 
@@ -110,8 +115,11 @@
             <i class="fas fa-plus"></i>
           </div>
         </div>
-        <h4>Heavy Metal</h4>
-        <h5>Kyle Dixon &and; Michael Stein</h5>
+        <div class="details">
+          <h4>Heavy Metal</h4>
+          <h5>Kyle Dixon &and; Michael Stein</h5>
+
+        </div>
       </div>
 
       <div class="album-1">
@@ -120,8 +128,11 @@
           <div class="overlay">
             <i class="fas fa-plus"></i>
           </div>
+        </div>
+        <div class="details">
           <h4>Heavy Metal</h4>
-          <h5>Subtitle</h5>
+          <h5>Kyle Dixon &and; Michael Stein</h5>
+
         </div>
       </div>
 
@@ -131,30 +142,39 @@
           <div class="overlay">
             <i class="fas fa-plus"></i>
           </div>
+        </div>
+        <div class="details">
           <h4>Heavy Metal</h4>
-          <h5>Subtitle</h5>
+          <h5>Kyle Dixon &amp; Michael Stein</h5>
+
         </div>
       </div>
 
-      <div class="album-1">
+      <div class="album-1 mini-album-spacing" id="cure">
         <div class="cover">
           <img src="img/cure.jpeg" alt="">
           <div class="overlay">
             <i class="fas fa-plus"></i>
           </div>
+        </div>
+        <div class="details">
           <h4>Heavy Metal</h4>
-          <h5>Subtitle</h5>
+          <h5>Kyle Dixon &amp; Michael Stein</h5>
+
         </div>
       </div>
 
-      <div class="album-1">
+      <div class="album-1 mini-album-spacing">
         <div class="cover">
           <img src="img/sinister.jpeg" alt="">
           <div class="overlay">
             <i class="fas fa-plus"></i>
           </div>
+        </div>
+        <div class="details">
           <h4>Heavy Metal</h4>
-          <h5>Subtitle</h5>
+          <h5>Kyle Dixon &amp; Michael Stein</h5>
+
         </div>
       </div>
     </div>
@@ -252,7 +272,7 @@
     <i class="fas fa-list"></i>
     <i class="fas fa-desktop"></i>
     <i class="fas fa-volume-up"></i>
-    <div class="bar">
+    <div class="side-bar">
 <div class="light-bar">
 
 </div>

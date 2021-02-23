@@ -65,6 +65,9 @@ aside #logo-img {
 
 }
 
+aside #small-logo{
+  display: none;
+}
 aside ul li {
   list-style-type: none;
   color: #666666;
@@ -84,10 +87,20 @@ aside .side-nav-1, aside .side-nav-2{
 
 }
 
-.side-nav-1 ul li:hover{
+/* .side-nav-1 ul li:hover{
   border-left: 2px solid #01c5c4;
   cursor: pointer;
 
+} */
+.side-nav-1 ul li::before{
+  content: "";
+  height: 10px;
+  width: 2px;
+  background-color: #01c5c4;
+  visibility: hidden;
+}
+.side-nav.1 ul li:hover ::before{
+  visibility: visible;
 }
 .nav-head{
   margin-top: 10px;
@@ -95,6 +108,8 @@ aside .side-nav-1, aside .side-nav-2{
 .nav-head h4{
   color: #fff;
   margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: super;
 }
 
 .side-nav-2 {
@@ -105,7 +120,6 @@ aside .side-nav-1, aside .side-nav-2{
 }
 
 #nav-head-button{
-display: inline-block;
 color: #fff;
 }
 
@@ -232,6 +246,7 @@ padding-bottom: 30px;
   margin-bottom: 10px;
   width: calc(100% / 6  - 10px);
   position: relative;
+  overflow: hidden;
 
 
 
@@ -241,39 +256,30 @@ padding-bottom: 30px;
   }
 
 .overlay{
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: transparent;
   display: none;
-  background-color: rgba(0, 0, 0, 0.5);
 
   }
 
-  .album-1:hover .overlay{
+  .album-1:hover .overlay, .album-2:hover .overlay{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-
-  }
-  .album-1:hover{
-
-  }
-  .album-2:hover .overlay{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    cursor: pointer;
   }
 
 .cover{
-  text-align: center;
+
+  position: relative;
+}
+.details{
+    text-align: center;
+
 }
 
 .overlay i {
@@ -284,9 +290,8 @@ padding-bottom: 30px;
     display: flex;
     width: 33%;
     flex-wrap: wrap;
-
-
   }
+
   .main-content-2 h2{
     color: #fff;
     padding-left: 10px;
@@ -338,10 +343,15 @@ padding-bottom: 30px;
   margin-bottom: 20px;
 }
 
+.main-content h4 {
+  color: #fff;
+}
+.main-content h5 {
+  color: #666666;
+}
 footer{
   height: 100px;
   width: 100%;
-  background-color: red;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -388,7 +398,7 @@ align-self: center;
   justify-content: center;
 }
 .player img {
-  width: 30px;
+  width: 20px;
   align-self: center;
 
 }
@@ -415,7 +425,14 @@ margin-right: 20px;
 
 .bar{
   height: 3px;
-  width: 40%;
+  width: 200px;
+  background-color: #666666;
+  position: relative;
+}
+.side-bar{
+  height: 3px;
+  width: 35px;
+  margin-right: 15px;
   background-color: #666666;
   position: relative;
 }
@@ -439,20 +456,218 @@ margin-right: 20px;
 .settings i {
   color: #666666;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
 
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 767px) and (max-width: 992px) {
+@media screen and (min-width: 993px) and (max-width:1540px) {
+  aside #small-logo{
+    display: none;
+  }
+  .song{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 20%;
+    height: 100%;
+  }
+  .settings{
+    display: flex;
+    flex-basis: 20%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
+  aside #small-logo{
+    display: none;
+  }
 .main-content-1{
   justify-content: flex-start;
+  margin-bottom: 30px;
 }
   .album-1{
     margin-left: 10px;
     margin-bottom: 10px;
     width: calc(100% / 4  - 10px);
     }
+    #cure{
+      margin-left: 0;
+
+    }
+    .mini-album-spacing{
+      padding-top: 20px;
+    }
+
+    .main-content-2, .main-content-3{
+      display: flex;
+      width: 50%;
+      flex-wrap: wrap;
+    }
+
+    .song, .settings{
+      flex-basis: 25%
+    }
+
+    .player{
+      flex-basis: 50%;
+    }
+    .bar{
+      height: 3px;
+      width: 120px;
+      background-color: #666666;
+      position: relative;
+    }
+
 }
+
+@media screen and (min-width:576px) and (max-width:767px) {
+  aside #small-logo{
+    display: none;
+  }
+
+  .main-nav ul {
+    margin-left: 10px;
+  }
+  .main-nav ul li{
+    padding-bottom: 10px;
+  }
+.album-1 {
+  width: calc(100% / 2 - 10px);
+  margin-left: 0;
+}
+
+.main-content-2, .main-content-3{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.album-2, .album-3{
+  width: calc(50% - 15px);
+  margin-bottom: 10px;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+.song * {
+  padding-right: 15px;
+}
+.song, .settings{
+  flex-basis: 25%
+}
+
+.player{
+  flex-basis: 50%;
+}
+
+.bar{
+  height: 3px;
+  width: 90px;
+  background-color: #666666;
+  position: relative;
+}
+
+
+}
+
+@media screen and (max-width:575px){
+  header{
+    left: 0;
+  }
+  header a {
+    right: 20px;
+  }
+  .xs-spacing{
+    padding-bottom: 25px;
+  }
+  .hide-xs{
+    display: none;
+  }
+  aside{
+    width: 80px;
+  }
+  aside #logo-img{
+    display: none;
+  }
+  aside #small-logo{
+    display: inline-block;
+    width: 30px;
+    margin: 10px auto 30px;
+  }
+  aside .aside-bottom{
+    margin-left: 0;
+  }
+  .aside-bottom-1, .aside-bottom-2 {
+    display: flex;
+    justify-content: center;
+
+  }
+  .aside-bottom-2{
+    padding-bottom: 10px;
+
+  }
+  .main-content{
+    margin-left: 80px;
+  }
+  .main-content .main-nav ul {
+    text-align: center;
+  }
+    .main-content-1{
+      margin-bottom: 30px;
+    }
+  .album-1 {
+    width: calc(100% / 2 - 10px);
+    margin-left: 0;
+  }
+
+  .main-content-2, .main-content-3{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .album-2, .album-3{
+    width: calc(50% - 15px);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .song, .settings{
+    flex-basis: 25%
+  }
+  .song *{
+    padding-right: 10px;
+  }
+
+  .player{
+    flex-basis: 50%;
+  }
+  .player .p-left{
+    margin-left: 5px;
+
+  }
+  .player-buttons{
+  margin-left: 5px;
+  margin-right: 0;
+  }
+  .bar{
+    height: 3px;
+    width: 50px;
+    background-color: #666666;
+    position: relative;
+  }
+  .settings i {
+    margin-left: 0;
+
+  }
+
+
+}
+
 /* /MEDIA QUERIES */
