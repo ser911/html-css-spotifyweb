@@ -38,8 +38,12 @@ header a {
   align-self: center;
   position: absolute;
   right: 260px;
+  transition: transform 1.2s;
 
+}
 
+header a:hover{
+  transform: scale(1.2);
 }
 /* /HEADER */
 
@@ -82,26 +86,18 @@ aside .side-nav-1, aside .side-nav-2{
 }
 .side-nav-1 ul li{
   border-left: 2px solid transparent;
-
-
-
+  transition: border-left 0.7s;
 }
 
-/* .side-nav-1 ul li:hover{
+.side-nav-1 ul li:hover{
   border-left: 2px solid #01c5c4;
-  cursor: pointer;
 
-} */
-.side-nav-1 ul li::before{
-  content: "";
-  height: 10px;
-  width: 2px;
-  background-color: #01c5c4;
-  visibility: hidden;
 }
-.side-nav.1 ul li:hover ::before{
-  visibility: visible;
+.side-nav-1 ul li i {
+  font-size: 30px;
+  padding-right: 5px;
 }
+
 .nav-head{
   margin-top: 10px;
 }
@@ -175,7 +171,7 @@ aside hr{
 }
  /* /ASIDE */
 
-
+/* MAIN */
 main{
   padding-top: 100px;
   height: calc(100vh - 100px);
@@ -206,13 +202,15 @@ main{
   display: block;
   background-color: #01c5c4;
   height: 2px;
-  visibility: hidden;
   width: 30px;
   margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 .main-nav ul li:hover::after{
-  visibility: visible;
+  opacity: 1;
+
 }
 
 .main-content-1{
@@ -263,18 +261,43 @@ padding-bottom: 30px;
   left: 0;
   right: 0;
   bottom: 0;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 1.3s;
 
   }
-
-  .album-1:hover .overlay, .album-2:hover .overlay{
+  .round-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* display: none; */
     background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1.3s;
+    border-radius: 100%;
   }
 
+
+  .album-1:hover .overlay, .album-2:hover .overlay{
+    /* display: flex; */
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    opacity: 1;
+  }
+.album-3:hover .round-overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  opacity: 1;
+}
 .cover{
 
   position: relative;
@@ -284,10 +307,11 @@ padding-bottom: 30px;
 
 }
 
-.overlay i {
+.overlay i, .round-overlay i {
   font-size: 60px;
-  color: #fff;
+  color: #f4f3f3;
 }
+
   .main-content-2, .main-content-3{
     display: flex;
     width: 33%;
@@ -346,10 +370,14 @@ padding-bottom: 30px;
 
 .main-content h4 {
   color: #fff;
+  padding-top: 8px;
 }
 .main-content h5 {
   color: #666666;
 }
+
+/* /MAIN */
+/* FOOTER */
 footer{
   height: 100px;
   width: 100%;
@@ -458,8 +486,9 @@ margin-right: 20px;
   color: #666666;
   margin-left: 10px;
   margin-right: 20px;
-
 }
+
+/* /FOOTER */
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 993px) and (max-width:1540px) {
